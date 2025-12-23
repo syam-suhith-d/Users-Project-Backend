@@ -9,7 +9,6 @@ router.post("/register",registerUser)
 
 router.post("/login",loginUser)
 
-
 // home-routes
 router.get("/home",authMiddleware,homePage)
 
