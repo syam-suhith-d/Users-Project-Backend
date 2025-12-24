@@ -23,7 +23,7 @@ var registerUser = async(req,res)=>{
 
     }catch(error){
         console.log("error",error);
-        res.status(500).json({message : "error occured"})
+        res.status(500).json({message : "Error occured"})
     }
 }
 
@@ -46,6 +46,8 @@ var loginUser = async(req,res)=>{
         res.status(200).json({message: "login succesfull",mytoken : token})
     }catch(error){
         console.log("error",error);
+        res.status(500).json({ message: "Server error" });
+
     }
 }
 
